@@ -11,7 +11,7 @@ $ mkdir [path to webroot][desired folder name]
 ```
 2. Clone the repo into the created directory
 ```
-git clone https://github.com/ezrarieben/MODX_Package_Skeleton.git
+git clone https://github.com/excelerondesign/MODX_Package_Skeleton.git
 ```
 3. Copy the content of the repo into a desired folder and delete the repo folder
 ```bash
@@ -28,12 +28,12 @@ $ chown -R [web user]:[web user group] [dev folder path]
 $ chmod -R 755 [dev folder path]
 ```
 6. Change the following files to fit your package structure (Class names, variables etc.)<br>
-    1. Package class (eg: core/components/samplepackage/model/samplepackage/samplepackage.class.php)
-    2. Controller class (eg: core/components/samplepackage/controllers/index.class.php)
-    3. Connector (eg: assets/components/samplepackage/connectors/connector.php)
+    1. Package class (eg: `core/components/samplepackage/model/samplepackage/samplepackage.class.php`)
+    2. Controller class (eg: `core/components/samplepackage/controllers/index.class.php`)
+    3. Connector (eg: `assets/components/samplepackage/connectors/connector.php`)
 7. Change the following files to fit your package structure if you are using a CMP otherwise delete them
-    1. home.tpl (eg: core/components/samplepackage/templates/home.tpl)
-    2. Mgr js files (eg: assets/components/samplepackage/mgr/*)
+    1. home.tpl (eg: `core/components/samplepackage/templates/home.tpl`)
+    2. Mgr js files (eg: `assets/components/samplepackage/mgr/*`)
 ### Preparing MODX for package development
 1. Create the following system settings
 ```
@@ -56,8 +56,8 @@ Assets path: [absolute path to your package assets eg: /var/www/html/dev/package
     4. Set the "Namespace" to your defined namespace
     
 ### Generating a schema
-1. Go to your _build folder and copy the build.schema.config.sample.php file and name the copy build.schema.config.php
-```bash
+1. Go to your \_build folder and copy the build.schema.config.sample.php file and name the copy build.schema.config.php
+```shell
 $ cd [path to _build]
 $ cp build.schema.config.sample.php build.schema.config.php
 ```
@@ -75,15 +75,16 @@ $modx->addPackage('[namespace]', $sources['model']); // add package to make all 
 $manager->createObjectContainer('[main class name]'); // created the database table
 ```
 4. Execute the build.schema.php script through your browser
+
 ### Generating a transport package
 1. Create a new namespace
     1. System Menu > Namespaces
     2. Create a new namespace
     3. Set the "namespace" field to your desired namespace
-    4. Set the "Core path" field to the absolute path of your package core (e.g. /var/www/html/dev/packages/MODX_SamplePackage/core/components/samplepackage/)
-    5. Set the "Assets path" field to the absolute path of your package assets (e.g. /var/www/html/dev/packages/MODX_SamplePackage/assets/components/samplepackage/)
-2. Go to your _build folder and copy the build.transport.config.sample.php file and name the copy build.transport.config.php
-```bash
+    4. Set the "Core path" field to the absolute path of your package core (e.g. `/var/www/html/dev/packages/MODX_SamplePackage/core/components/samplepackage/`)
+    5. Set the "Assets path" field to the absolute path of your package assets (e.g. `/var/www/html/dev/packages/MODX_SamplePackage/assets/components/samplepackage/`)
+2. Go to your \_build folder and copy the build.transport.config.sample.php file and name the copy build.transport.config.php
+```shell
 $ cd [path to _build]
 $ cp build.transport.config.sample.php build.transport.config.php
 ```
